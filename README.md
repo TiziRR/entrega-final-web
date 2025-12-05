@@ -12,9 +12,9 @@ Incluye:
 - Modal para editar productos
 - Estilos personalizados con CSS
 
-## 🚀 Características Principales
+## Características Principales
 
-### 🔹 Frontend (Cliente)
+### Frontend (Cliente)
 
 - Diseñado 100% con HTML, CSS y TypeScript
 - Listado de productos dinámico (se cargan desde la API)
@@ -25,96 +25,109 @@ Incluye:
   - Minimodal desplegable
 - Build generado a /dist para ser consumido desde el HTML
 
-### 🔹 Backend (Servidor)
+### Backend (Servidor)
 
 **Tecnologías:**
 - Node.js
 - Express
-- SQLite
-- Base de datos persistida como archivo .db
+- SQLite (archivo ecommerce.db)
 
 **Funciones principales:**
-- ✔ Obtener productos
-- ✔ Crear productos (admin)
-- ✔ Editar productos (admin)
-- ✔ Eliminar productos (admin)
-- ✔ Buscar producto por ID
+- Obtener productos
+- Crear productos (admin)
+- Editar productos (admin)
+- Eliminar productos (admin)
+- Autenticación básica (rutas de auth)
+- Buscar producto por ID
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 
 ```
-/backend
-   ├── db
-   │    └── database.js
-   ├── routes
-   │    └── products.js
-   └── server.js
-
-/frontend
-   ├── src
-   │    ├── api
-   │    │    ├── products.ts
-   │    │    └── admin.ts
-   │    ├── cart
-   │    │    └── cart.ts
-   │    ├── components
-   │    │    ├── product_component.ts
-   │    │    └── cart_component.ts
-   │    ├── interfaces
-   │    │    └── product.ts
-   │    └── utils
-   │         └── fetchProducts.ts
-   ├── dist  (generado por tsc)
-   └── pages
-        ├── home.html
-        └── admin.html
+final-web/
+├── Backend/
+│   └── src/
+│       ├── db/
+│       │   ├── database.ts
+│       │   └── ecommerce.db
+│       ├── interfaces/
+│       │   ├── product.ts
+│       │   └── usuario.ts
+│       ├── routes/
+│       │   ├── auth.routes.ts
+│       │   └── product.routes.ts
+│       └── server.ts
+│
+└── Frontend/
+    └── src/
+        ├── api/
+        │   ├── admin.ts
+        │   └── products.ts
+        ├── assets/
+        │   └── (imágenes, fuentes, etc.)
+        ├── components/
+        │   ├── cart_components.ts
+        │   └── product_component.ts
+        ├── interfaces/
+        │   └── product.ts
+        ├── styles/
+        │   ├── admin.css
+        │   ├── auth.css
+        │   ├── cart.css
+        │   └── home.css
+        ├── utils/
+        │   └── cart.ts
+        └── views/
+            ├── admin.html
+            ├── home.html
+            ├── login.html
+            └── register.html
 ```
 
-## ⚙️ Cómo ejecutar el proyecto
+## Cómo ejecutar el proyecto
 
 ### 1️⃣ Instalar dependencias
 
 **Backend:**
 ```bash
-cd backend
+cd Backend
 npm install
 ```
 
 **Frontend:**
 ```bash
-cd frontend
+cd Frontend
 npm install
 ```
 
 ### 2️⃣ Ejecutar el backend
 
 ```bash
+cd Backend
 npm run dev
 ```
 
-El servidor correrá en: `http://localhost:3000`
+El servidor correrá en: `http://localhost:3000` (ajustar según configuración en server.ts)
 
 ### 3️⃣ Ejecutar el frontend
 
 El frontend es HTML + TS, por lo que:
 
-1. Compilar TypeScript:
+1. Compilar TypeScript (desde Frontend):
 ```bash
 npm run build
 ```
 
-2. Abrir `pages/home.html` y `pages/admin.html` con Live Server o similar.
+2. Servir o abrir los archivos en `src/views/` (`home.html`, `admin.html`, `login.html`, `register.html`) con Live Server o similar.
 
-## 🖥️ Panel de Administración (CRUD)
+## Panel de Administración (CRUD)
 
 El panel admin permite:
 - Agregar un producto
 - Listarlo
 - Editarlo mediante un modal animado
 - Eliminarlo con confirmación
-- Vista moderna y limpia
 
-## 🛒 Carrito de Compras
+## Carrito de Compras
 
 - Botones "Agregar al carrito" generados dinámicamente
 - Carrito guardado en localStorage
@@ -122,15 +135,13 @@ El panel admin permite:
   - Lista de productos
   - Total actualizado
   - Botón de cerrar
-- Se actualiza cuando se reabre el modal
 
-## 🎨 Estilo y Diseño
+## Estilo y Diseño
 
-- CSS puro con sombra, gradientes, tarjetas, botones modernos
+- CSS puro con sombras, gradientes y diseños modernos
 - Diseño responsive
-- Modal centrado con blur de fondo
 
-## 📌 Tecnologías utilizadas
+## Tecnologías utilizadas
 
 | Tecnología | Uso |
 |---|---|
@@ -138,9 +149,9 @@ El panel admin permite:
 | CSS3 | Estilos y diseño |
 | TypeScript | Lógica del Frontend |
 | Node.js / Express | API REST |
-| SQLite3 | Base de datos |
+| SQLite3 | Base de datos (ecommerce.db) |
 | LocalStorage | Carrito persistido en el cliente |
 
-## 🧑‍💻 Autor
+## Autor
 
 Proyecto desarrollado por Tiziano Rossi
