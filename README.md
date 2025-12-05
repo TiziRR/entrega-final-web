@@ -114,7 +114,7 @@ El frontend es HTML + TS, por lo que:
 
 1. Compilar TypeScript (desde Frontend):
 ```bash
-npm run build
+npm run dev
 ```
 
 2. Servir o abrir los archivos en `src/views/` (`home.html`, `admin.html`, `login.html`, `register.html`) con Live Server o similar.
