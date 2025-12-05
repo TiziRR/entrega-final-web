@@ -1,63 +1,48 @@
-Micro Ecommerce funcional
+# Micro Ecommerce funcional
 
 Este proyecto es una tienda web, construida totalmente desde cero sin frameworks en el frontend.
 
 Incluye:
 
-Frontend en HTML + TypeScript, compilado a la carpeta /dist
+- Frontend en HTML + TypeScript, compilado a la carpeta /dist
+- Backend en Node.js + Express + SQLite
+- Panel de administrador con CRUD completo (crear, editar, eliminar)
+- Listado de productos para clientes
+- Carrito de compras persistido en localStorage
+- Modal para editar productos
+- Estilos personalizados con CSS
 
-Backend en Node.js + Express + SQLite
+## 🚀 Características Principales
 
-Panel de administrador con CRUD completo (crear, editar, eliminar)
+### 🔹 Frontend (Cliente)
 
-Listado de productos para clientes
+- Diseñado 100% con HTML, CSS y TypeScript
+- Listado de productos dinámico (se cargan desde la API)
+- Carrito de compras con:
+  - Agregar productos
+  - Calcular total
+  - Persistencia en localStorage
+  - Minimodal desplegable
+- Build generado a /dist para ser consumido desde el HTML
 
-Carrito de compras persistido en localStorage
+### 🔹 Backend (Servidor)
 
-Modal para editar productos
+**Tecnologías:**
+- Node.js
+- Express
+- SQLite
+- Base de datos persistida como archivo .db
 
-Estilos personalizados con CSS
+**Funciones principales:**
+- ✔ Obtener productos
+- ✔ Crear productos (admin)
+- ✔ Editar productos (admin)
+- ✔ Eliminar productos (admin)
+- ✔ Buscar producto por ID
 
-🚀 Características Principales
-🔹 Frontend (Cliente)
+## 📁 Estructura del proyecto
 
-Diseñado 100% con HTML, CSS y TypeScript
-
-Listado de productos dinámico (se cargan desde la API)
-
-Carrito de compras con:
-
-Agregar productos
-
-Calcular total
-
-Persistencia en localStorage
-
-Minimodal desplegable
-
-Build generado a /dist para ser consumido desde el HTML
-
-🔹 Backend (Servidor)
-
-Tecnologías:
-
-Node.js
-
-Express
-
-SQLite
-
-Base de datos persistida como archivo .db
-
-Funciones principales:
-
-✔ Obtener productos
-✔ Crear productos (admin)
-✔ Editar productos (admin)
-✔ Eliminar productos (admin)
-✔ Buscar producto por ID
-
-📁 Estructura del proyecto
+```
 /backend
    ├── db
    │    └── database.js
@@ -83,87 +68,79 @@ Funciones principales:
    └── pages
         ├── home.html
         └── admin.html
+```
 
-⚙️ Cómo ejecutar el proyecto
-1️⃣ Instalar dependencias
+## ⚙️ Cómo ejecutar el proyecto
 
-Backend:
+### 1️⃣ Instalar dependencias
 
+**Backend:**
+```bash
 cd backend
 npm install
+```
 
-
-Frontend:
-
+**Frontend:**
+```bash
 cd frontend
 npm install
+```
 
-2️⃣ Ejecutar el backend
+### 2️⃣ Ejecutar el backend
+
+```bash
 npm run dev
+```
 
+El servidor correrá en: `http://localhost:3000`
 
-El servidor correrá en:
-
-http://localhost:3000
-
-3️⃣ Ejecutar el frontend
+### 3️⃣ Ejecutar el frontend
 
 El frontend es HTML + TS, por lo que:
 
-1️⃣ Compilar TypeScript
-
+1. Compilar TypeScript:
+```bash
 npm run build
+```
 
+2. Abrir `pages/home.html` y `pages/admin.html` con Live Server o similar.
 
-2️⃣ Abrir pages/home.html y pages/admin.html con Live Server o similar.
-
-🖥️ Panel de Administración (CRUD)
+## 🖥️ Panel de Administración (CRUD)
 
 El panel admin permite:
+- Agregar un producto
+- Listarlo
+- Editarlo mediante un modal animado
+- Eliminarlo con confirmación
+- Vista moderna y limpia
 
-Agregar un producto
+## 🛒 Carrito de Compras
 
-Listarlo
+- Botones "Agregar al carrito" generados dinámicamente
+- Carrito guardado en localStorage
+- Minimodal con:
+  - Lista de productos
+  - Total actualizado
+  - Botón de cerrar
+- Se actualiza cuando se reabre el modal
 
-Editarlo mediante un modal animado
+## 🎨 Estilo y Diseño
 
-Eliminarlo con confirmación
+- CSS puro con sombra, gradientes, tarjetas, botones modernos
+- Diseño responsive
+- Modal centrado con blur de fondo
 
-Vista moderna y limpia
+## 📌 Tecnologías utilizadas
 
-🛒 Carrito de Compras
+| Tecnología | Uso |
+|---|---|
+| HTML5 | Estructura del Frontend |
+| CSS3 | Estilos y diseño |
+| TypeScript | Lógica del Frontend |
+| Node.js / Express | API REST |
+| SQLite3 | Base de datos |
+| LocalStorage | Carrito persistido en el cliente |
 
-Botones “Agregar al carrito” generados dinámicamente
-
-Carrito guardado en localStorage
-
-Minimodal con:
-
-Lista de productos
-
-Total actualizado
-
-Botón de cerrar
-
-Se actualiza cuando se reabre el modal
-
-🎨 Estilo y Diseño
-
-CSS puro con sombra, gradientes, tarjetas, botones modernos
-
-Diseño responsive
-
-Modal centrado con blur de fondo
-
-📌 Tecnologías utilizadas
-Tecnología	Uso
-HTML5	Estructura del Frontend
-CSS3	Estilos y diseño
-TypeScript	Lógica del Frontend
-Node.js / Express	API REST
-SQLite3	Base de datos
-LocalStorage	Carrito persistido en el cliente
-
-🧑‍💻 Autor
+## 🧑‍💻 Autor
 
 Proyecto desarrollado por Tiziano Rossi
