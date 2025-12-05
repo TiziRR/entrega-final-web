@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/cart.css">
+    <title>Home</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="login.html">← Volver</a>
+      <h1 class="title">Elegi tu favorito</h1>
+    </nav>
+
+    <div id="products"></div>
+
+    <button id="open-cart-btn" class="cart-btn">Carrito</button>
+
+    <div id="cart-modal" class="cart-modal hidden">
+      <div class="cart-box">
+        <h3>Tu carrito</h3>
+        <div id="cart-items"></div>
+
+        <h4>Total: $<span id="cart-total">0</span></h4>
+        
+        <div class="botones">
+          <button id="close-cart-btn">Cerrar</button>
+          <button id="clear-cart-btn">Vaciar carrito</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="../../dist/api/products.js"></script>
+    <script type="module" src="../../dist/utils/cart.js"></script>
+    <script type="module" src="../../dist/components/cart_component.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../styles/auth.css">
+</head>
+<body>
+    <h1 class="title">Crear cuenta</h1>
+
+  <form id="registerForm">
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Contraseña" required>
+
+    <select id="role">
+      <option value="user">Usuario</option>
+      <option value="admin">Admin</option>
+    </select>
+
+    <button type="submit">Registrarse</button>
+  </form>
+
+  <p><a href="login.html">Ya tengo cuenta</a></p>
+
+  <script type="module" src="../../dist/auth/auth.js"></script>
+</body>
+</html>

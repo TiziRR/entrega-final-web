@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panel Admin – CRUD Productos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/admin.css">
+</head>
+<body>
+  <header>
+    <h1>Panel de Control – Productos</h1>
+  </header>
+
+  <main>
+    <section class="create-section">
+      <h2>Agregar Producto</h2>
+    
+      <form id="form-product">
+        <input type="text" id="name" placeholder="Nombre" required>
+        <input type="number" id="price" placeholder="Precio" required>
+        <input type="text" id="image" placeholder="URL de Imagen" required>
+        <button type="submit">Guardar</button>
+      </form>
+    
+      <p id="message"></p>
+    </section>
+
+    <hr>
+  
+    <section class="read-section">
+      <h2>Lista de productos</h2>
+      <div id="products"></div>
+    </section>
+  
+    <div id="form-bg" style="display: none;">
+    </div>
+    <form id="form-edit" style="display: none;">
+      <label>Nombre</label>
+      <input type="text" id="edit-name" required>
+      <label>Precio</label>
+      <input type="number" id="edit-price" required>
+      <label>Imagen</label>
+      <input type="text" id="edit-image" required>
+      <button type="submit">Actualizar</button>
+    </form>
+  </main>
+
+  <script type="module" src="../../dist/api/admin.js"></script>
+</body>
+</html>
